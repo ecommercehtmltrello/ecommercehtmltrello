@@ -1,0 +1,36 @@
+    <div class="form-group">
+        <label for="categoria">Categoria do Fornecedor:</label>
+        <select id="categoria" name="categoria" required>
+            <option value="">Selecione uma categoria</option>
+            <option value="pet">Produtos PET</option>
+            <option value="eletricos">Materiais Elétricos</option>
+            <option value="veiculos">Acessórios de Veículos</option>
+            <option value="cameras">Câmeras e Controles</option>
+            <option value="livros">Livros</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="fornecedorNome">Nome do Fornecedor:</label>
+        <input type="text" id="fornecedorNome" name="fornecedorNome" required>
+    </div>
+
+    <div class="form-group">
+        <label for="fornecedorCNPJ">CNPJ:</label>
+        <input type="text" id="fornecedorCNPJ" name="fornecedorCNPJ" pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" placeholder="00.000.000/0000-00" required>
+    </div>
+
+    <div class="form-group">
+        <label for="fornecedorEndereco">Endereço Completo:</label>
+        <textarea id="fornecedorEndereco" name="fornecedorEndereco" rows="3" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="fornecedorContato">Nome do Contato:</label>
+        <input type="text" id="fornecedorContato" name="fornecedorContato" required>
+    </div>
+
+    <div class="form-group">
+        <label for="fornecedorTelefone">Telefone:</label>
+        <input type="tel" id="fornecedorTelefone" name="fornecedorTelefone" pattern="\(\d{2}\)\s\d{4,5}-\
+        
