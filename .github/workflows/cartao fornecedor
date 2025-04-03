@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Fornecedores e Produtos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        
+        .form-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        button[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form id="cadastroForm">
+            <h2>Cadastro de Fornecedor</h2>
+            
+            <div class="form-group">
+                <label for="categoria">Categoria:</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="">Selecione uma categoria</option>
+                    <option value="pet">Produtos PET</option>
+                    <option value="eletricos">Materiais Elétricos</option>
+                    <option value="veiculos">Acessórios de Veículos</option>
+                    <option value="cameras">Câmeras e Monitoramento</option>
+                    <option value="livros">Livros</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fornecedorNome">Nome do Fornecedor:</label>
+                <input type="text" id="fornecedorNome" name="fornecedorNome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fornecedorCNPJ">CNPJ:</label>
+                <input type="text" id="fornecedorCNPJ" name="fornecedorCNPJ" pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" placeholder="00.000.000/0000-00" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fornecedorEndereco">Endereço Completo:</label>
+                <textarea id="fornecedorEndereco" name="fornecedorEndereco" rows="3" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="fornecedorContato">Nome do Contato:</label>
+                <input type="text" id="fornecedorContato" name="fornecedorContato" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fornecedorTelefone">Telefone:</label>
+                <input type="tel" id="fornecedorTelefone" name="fornecedorTelefone" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" placeholder="(00) 00000-0000" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fornecedorEmail">E-mail:</label>
+                <input type="email" id="fornecedorEmail" name="fornecedorEmail" required>
+            </div>
+
+            <h2>Cadastro de Produto</h2>
+
+            <div class="form-group">
+                <label for="produtoNome">Nome do Produto:</label>
+                <input type="text" id="produtoNome" name="produtoNome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="produtoDescricao">Descrição do Produto:</label>
+                <textarea id="produtoDescricao" name="produtoDescricao" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="produtoPreco">Preço (R$):</label>
+                <input type="number" id="produtoPreco" name="produtoPreco" step="0.01" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="produtoQuantidade">Quantidade em Estoque:</label>
+                <input type="number" id="produtoQuantidade" name="produtoQuantidade" min="0" required>
+            </div>
+
+            <div class="buttons">
+                <button type="submit">Salvar Cadastro</button>
+                <button type="reset">Limpar Campos</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
